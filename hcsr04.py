@@ -10,9 +10,9 @@ class HCSR04() :
     La méthode n_mesures renvoie la moyenne de  n mesures  de la distnace en mm ( n passé en paramètres) 
     '''
     
-    def __init__(self,broche_trig,broche_echo):
-       self.Pin_trig = broche_trig
-       self.Pin_echo = broche_echo
+    def __init__(self,broche_Trig,broche_Echo):
+       self.Pin_trig = broche_Trig
+       self.Pin_echo = broche_Echo
 
     def distance(self):   
         sig = Pin(self.Pin_trig, Pin.OUT)
