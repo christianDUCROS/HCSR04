@@ -7,7 +7,7 @@ import utime
 class HCSR04() :
     ''' A l'instanciation, donnez les numéros des broches en paramètres sur lesquelles sont connectées Trig et Echo 
     La méthode distance renvoie la distance en mm sinon -1 lorsque la mesure n'a pas aboutie
-    La méthode n_mesures renvoie la moyenne de  n mesures  de la distnace en mm ( n passé en paramètres) 
+    La méthode n_mesures renvoie la moyenne de  'n' mesures  de la distance en mm ( 'n' passé en paramètres) 
     '''
     
     def __init__(self,broche_Trig,broche_Echo):
@@ -39,7 +39,7 @@ class HCSR04_GROVE() :
     ''' Sur groove : SIG correspond à Trig et Echo donc broche_trig = broche_echo = broche_SIG
     A l'instanciation, donnez le numéro de la broche connectée en paramètre sur laquelle est  connectée SIG 
     La méthode distance renvoie la distance en mm sinon -1 lorsque la mesure n'a pas aboutie
-    La méthode n_mesures renvoie la moyenne de  n mesures  de la distnace en mm ( n passé en paramètres) 
+    La méthode n_mesures renvoie la moyenne de  'n' mesures  de la distance en mm ( 'n' passé en paramètres) 
     '''
     def __init__(self,broche_SIG):
         self.broche = broche_SIG
