@@ -53,7 +53,7 @@ class HCSR04_GROVE() :
         sig.value(0)
         sig = Pin(self.broche, Pin.IN)
         t = time_pulse_us(sig, 1, 24000) # timeout pour 4m  = 2 * 11700
-        dist = 340000 * t // 2000000
+        dist_mm = 340000 * t // 2000000
         utime.sleep_ms(60) #temps mini entre 2 mesures  (60ms)
         return dist_mm
    
@@ -72,6 +72,6 @@ if __name__ == '__main__':
     while True:
         #mesure = HCSR04_GROVE(1).distance()   
         #print(mesure)
-        mesure = HCSR04_GROVE(1).n_mesures(10)   
+        mesure = capteur_HCSR_1.n_mesures(10)   
         print(mesure)
         utime.sleep_ms(200)
